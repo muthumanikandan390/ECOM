@@ -22,6 +22,15 @@ function NavBar() {
           </a>
         </ul>
         </div>
+        <div className={styles.featuresContainer}>
+        <img className={styles.cartImg} src={assets.search_icon}></img>
+        <img className={styles.cartImg} src={assets.profile_icon}></img>
+        <div className={styles.badgeContainer}>
+        <img className={styles.cartImg} src={assets.cart_icon}></img>
+        <p className={styles.badge}>0</p>
+        </div>
+
+        </div>
         </div>
       </nav>
     </header>

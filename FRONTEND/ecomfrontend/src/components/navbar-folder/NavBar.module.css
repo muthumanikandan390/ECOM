@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400&display=swap');
 
 
 .navImage{
@@ -16,8 +16,15 @@ ul a {
 text-decoration: none;
 color: black;
 font-family: "Outfit", sans-serif;
-font-weight: 500;
-font-style: normal;
+font-weight: 400;
+
+
+}
+
+a h1 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
 }
 
 
@@ -41,5 +48,34 @@ font-style: normal;
 }
 
 .navLinkContainer{
-  margin-right: 170px;
+  margin-right: 90px;
+}
+
+.cartImg {
+height: 23px;
+align-items: center;
+}
+
+.featuresContainer {
+ padding-right: 40px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 30px;
+}
+.badgeContainer {
+  position: relative;
+}
+.badge {
+  position: absolute;
+  right: -8px;
+  bottom: -8px;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+  background-color: rgb(210, 1, 1);
+  color: white;
+  border-radius: 50%;
+  font-size: 8px;
 }
