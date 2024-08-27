@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom';
+import Hero from '../../components/hero-folder/Hero';
 function home() {
   return (
     <div>
-      hello world
-      <Link to="/login" >
-      <button >click me </button>
-      </Link>
+    <Hero />
     </div>
 
   )
