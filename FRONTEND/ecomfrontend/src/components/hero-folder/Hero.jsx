@@ -8,9 +8,9 @@ function Hero() {
       <div className={styles.heroContainer1}>
         <div className={styles.heroDescription}>
           <h1 className={styles.line}></h1>
-          <p> OUR BEST SELLER </p>
+          <p className={styles.seller}> OUR BEST SELLER </p>
         <h1 className={styles.arrivals}> Latest Arrivals </h1>
-        <p> SHOP NOW </p>
+        <p className={styles.now}> SHOP NOW </p>
         <h1 className={styles.line}></h1>
         <h1 className={styles.line}></h1>
         </div>

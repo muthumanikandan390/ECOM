@@ -1,26 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 /* hero container  */
 .heroContainer {
   display:flex;
+  border-style:solid;
+  border-width: 0.7px;
+
 }
 
 
 /* hero container 1 */
 .heroContainer1{
   width:40%;
-  background-color: aqua;
+  background-color:#FFD9D6;
   height: auto;
   position: relative;
+
 
 }
 
 .line{
-  border-bottom: 1px solid #888;
+  border-bottom: 2px solid #63212e;
 }
 .heroDescription{
   position: absolute;
   margin-top: 50%;
   margin-left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.seller {
+  font-family: Outfit;
+
+}
+
+.arrivals{
+  font-family: "Prata", serif;
+  font-weight: 400;
+}
+
+
+.now{
+  font-family:Outfit;
+
 }
 
 

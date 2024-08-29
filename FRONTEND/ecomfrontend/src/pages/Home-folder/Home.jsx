@@ -1,12 +1,31 @@
 import { Link } from 'react-router-dom';
 import Hero from '../../components/hero-folder/Hero';
-function home() {
+import ScrollButton from '../../components/scroll-button/ScrollButton';
+import NewCollection from '../../components/NewCollection/NewCollection';
+import { useRef , useEffect } from 'react';
+
+
+
+function Home() {
+
+const newCollectionRef = useRef(null)
+
+const scrollToSection = (elementRef) => {
+  window.scrollTo({
+  top: elementRef.current.offsetTop + elementRef.current.offsetHeight ,
+  behavior: "smooth",
+ });
+};
+
+
   return (
     <div>
     <Hero />
+    <ScrollButton scrollToSection={scrollToSection} sectionRef={newCollectionRef} />
+    <NewCollection sectionRef={newCollectionRef} />
     </div>
 
   )
 }
 
-export default home
+export default Home

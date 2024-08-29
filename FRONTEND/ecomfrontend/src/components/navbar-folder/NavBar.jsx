@@ -12,13 +12,16 @@ function NavBar() {
         <div className={styles.navLinkContainer} >
         <ul className={styles.navUl}>
           <a href='#'>
-            <h1> about </h1>
+            <h1> HOME </h1>
           </a>
           <a href='#'>
-            <h1> contact </h1>
+            <h1> COLLECTION </h1>
           </a>
           <a href='#'>
-            <h1> cell no </h1>
+            <h1> ABOUT </h1>
+          </a>
+          <a href='#'>
+            <h1> CONTACT </h1>
           </a>
         </ul>
         </div>

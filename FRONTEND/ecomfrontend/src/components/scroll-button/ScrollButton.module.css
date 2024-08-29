@@ -1,0 +1,36 @@
+.scrollButtonContainer{
+display:flex;
+justify-content: center;
+padding-top: 50px;
+
+}
+
+.scrollButton{
+  padding: 20px;
+  border-style: none;
+  font-size: 14px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-bottom: 2px solid;
+  background-color: white;
+  animation: borderAnimation 3s infinite;
+  cursor: pointer;
+}
+
+
+@keyframes borderAnimation {
+  0% {
+    border-image: linear-gradient(45deg, red, yellow, green) 1;
+  }
+  33% {
+    border-image: linear-gradient(45deg, yellow, green, red) 1;
+  }
+  10% {
+    border-image: linear-gradient(45deg, red, yellow, green) 1;
+  }
+  66% {
+    border-image: linear-gradient(45deg, green, red, yellow) 1;
+  }
+  100% {
+    border-image: linear-gradient(45deg, red, yellow, green) 1;
+  }
+}
