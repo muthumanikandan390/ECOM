@@ -1,7 +1,18 @@
 import {assets} from '../../assets/assets'
 import styles from './navBar.module.css'
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+
 
 function NavBar() {
+
+ const [active , setActive] = useState(false)
+
+
+
+
+
+
   return (
     <header >
       <nav>
@@ -11,19 +22,39 @@ function NavBar() {
         </div>
         <div className={styles.navLinkContainer} >
         <ul className={styles.navUl}>
-          <a href='#'>
-            <h1> HOME </h1>
-          </a>
-          <a href='#'>
-            <h1> COLLECTION </h1>
-          </a>
-          <a href='#'>
-            <h1> ABOUT </h1>
-          </a>
-          <a href='#'>
+
+    <NavLink to='/'  className={({ isActive }) => isActive ? `${styles.active}` : "" }>
+
+            <h1 > HOME </h1>
+            <p className={`${styles.line} ${styles.lineDisplay}`}></p>
+
+    </NavLink>
+
+
+                  <NavLink to='collection' className={({ isActive }) => isActive ? `${styles.active}` : "" }>
+
+                        <h1> COLLECTION </h1>
+
+                 </NavLink>
+
+
+                  <NavLink to='about' className={({ isActive }) => isActive ? `${styles.active}` : "" }>
+
+                  <h1> ABOUT </h1>
+
+                  </NavLink>
+
+
+          <NavLink to='contact' className={({ isActive }) => isActive ? `${styles.active}` : "" }>
+
             <h1> CONTACT </h1>
-          </a>
+
+          </NavLink>
+
         </ul>
+
+
+
         </div>
         <div className={styles.featuresContainer}>
         <img className={styles.cartImg} src={assets.search_icon}></img>
