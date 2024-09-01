@@ -11,8 +11,6 @@ function NavBar() {
 
 
 
-
-
   return (
     <header >
       <nav>

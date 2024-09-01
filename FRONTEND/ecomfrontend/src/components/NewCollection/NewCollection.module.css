@@ -11,7 +11,6 @@
 .cardGridContainer{
 
   width: 1250px;
-
   height: max-content;
   flex-grow: 1;
   display: flex;
@@ -50,10 +49,12 @@ span {
 }
 
 .gridItem {
-  background-color: #8ca0ff;
+
   width: 304px;
   height: 390px;
   position: relative;
+
+
 }
 
 .gridImg{
@@ -87,9 +88,37 @@ span {
   transition: opacity 0.3s ease, background-color 0.9s ease;
 }
 
+
+.zindex button {
+border-radius: 20px;
+ margin-top: 170px;
+ outline:none;
+}
+
 .gridItem:hover .zindex {
   background-color: rgb(0, 0, 0 , 90);
   opacity: 0.6;
   transform: scale(1);
+
+}
+
+
+.descriptionPrice{
+  position: absolute;
+  top: 300px;
+  background-color:white;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: Outfit;;
+
+}
+
+.price{
+
+padding-top: 10px;
 
 }
