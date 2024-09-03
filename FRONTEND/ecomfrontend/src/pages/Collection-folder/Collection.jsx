@@ -1,6 +1,7 @@
+import styles from './Collection.module.css'
 function Collection() {
   return (
-    <div>
+    <div className={styles.collection}>
 
     </div>
   )

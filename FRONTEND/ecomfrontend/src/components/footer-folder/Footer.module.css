@@ -1,0 +1,84 @@
+.footer{
+
+  height: 300px;
+  width: 1300px; /* or a percentage-based width */
+  display: flex;
+  gap: 100px;
+  flex-grow: 1; /* `1fr` is not valid in this context; `1` is correct */
+  font-family: Outfit;
+  margin: 0 auto; /* This will center the footer */
+
+}
+
+.div1{
+flex: 3;
+text-align:left;
+justify-content: center;
+position: relative;
+
+}
+
+.div1 img{
+
+height: 50px;
+}
+
+/* .div1 img h1{
+  text-align: left;
+} */
+
+
+.divImg{
+height: auto;
+
+}
+
+
+.div1p{
+width: 75%;
+justify-content: center;
+text-align:left;
+}
+
+
+
+
+.div1 p {
+
+  top: 50%;
+  left: 50%;
+
+}
+
+.div1p ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+flex-direction: column;
+gap: 10px;
+align-items: left;
+}
+
+
+
+.div2{
+  flex: 2;
+  text-align: left;
+  justify-content: center;
+
+  }
+  .div3{
+    flex: 2;
+    text-align: center;
+    justify-content: center;
+    }
+
+
+    p {
+      color: #808080;
+      line-height: 1.6;
+    }
+
+    li {
+      color: #808080;
+    }

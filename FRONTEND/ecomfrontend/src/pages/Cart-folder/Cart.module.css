@@ -1,0 +1,12 @@
+
+.cart{
+  height: 700px;
+border-style: dashed;
+}
+
+.cartContainer{
+  border-style: dashed;
+  height: 100%;
+  width: 80%; /* Set to 80% or your preferred size */
+  margin: 0 auto; /* Center it within the parent div */
+}

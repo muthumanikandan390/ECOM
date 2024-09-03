@@ -57,10 +57,13 @@ function NavBar() {
         <div className={styles.featuresContainer}>
         <img className={styles.cartImg} src={assets.search_icon}></img>
         <img className={styles.cartImg} src={assets.profile_icon}></img>
+
+        <NavLink to='/cart'>
         <div className={styles.badgeContainer}>
         <img className={styles.cartImg} src={assets.cart_icon}></img>
         <p className={styles.badge}>0</p>
         </div>
+        </NavLink>
 
         </div>
         </div>
