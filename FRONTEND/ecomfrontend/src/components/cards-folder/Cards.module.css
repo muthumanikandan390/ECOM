@@ -1,4 +1,24 @@
-.cards{
-  height: 800px;
-  background-color: bisque;
+.cards {
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  min-height: 450px; /* Adjust height as needed */
+  width: 240px; /* Adjust width as needed */
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-wrap: wrap;
+  display: flex;
+
+}
+
+.container1 {
+  margin: 0;
+  padding: 0;
+  margin-top:-170px;
+  height: 280px;
+  background-color: pink;
+  width: 290px;
 }
