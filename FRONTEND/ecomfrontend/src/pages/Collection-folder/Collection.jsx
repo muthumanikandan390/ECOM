@@ -17,25 +17,10 @@ function Collection() {
       <Cards />
       <Cards />
       <Cards />
-
       <Cards />
       <Cards />
       <Cards />
       <Cards />
-      <Cards />
-      <Cards />
-
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-
-      <Cards />
-      <Cards />
-
-
 
     </div>
   )

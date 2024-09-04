@@ -1,7 +1,10 @@
+
 .collection{
   height: 100%;
-  background-color: bisque;
   display: flex;
   flex-wrap:wrap;
-  justify-content:space-between;
+  justify-content:unset;
+  margin-left: 30px;
+  margin-bottom: 5px;
+
 }
