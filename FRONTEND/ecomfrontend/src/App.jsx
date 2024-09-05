@@ -1,6 +1,8 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 import Home from "./pages/Home-folder/Home";
 import Login from "./pages/Login-folder/Login";
@@ -17,7 +19,8 @@ const queryClient = new QueryClient()
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient} >
+    <Provider store={store}>
+        <QueryClientProvider client={queryClient} >
     <BrowserRouter>
     <NavBar />
     <Routes>
@@ -31,6 +34,8 @@ function App() {
     <Footer/>
   </BrowserRouter>
   </QueryClientProvider>
+    </Provider>
+
   )
 }
 

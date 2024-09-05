@@ -3,7 +3,10 @@ import styles from './Cards.module.css'
 import img1 from '../../assets/p_img1.png';
 
 
-function Cards({img , description , price }) {
+
+function Cards({img , description , price , handleAddToCart }) {
+
+
   return (
     <div className={styles.cards} >
       <div className={styles.container1}>
@@ -14,7 +17,7 @@ function Cards({img , description , price }) {
         <p> PRICE : <em>${price}</em> </p>
 
         </div>
-        <button className={styles.cardBtn}>add to cart</button>
+        <button onClick={handleAddToCart} className={styles.cardBtn} >add to cart</button>
 
       </div>
 

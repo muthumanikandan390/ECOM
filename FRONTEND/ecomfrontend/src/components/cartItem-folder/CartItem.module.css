@@ -1,24 +1,3 @@
-
-.cart{
-  height: 700px;
-border-style: dashed;
-font-family: Outfit;
-
-
-}
-
-.cartContainer{
-  border-style: dashed;
-  height: 100%;
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  overflow:scroll;
-
-}
-
 .cartTable {
   width: 100%;
   border-collapse: collapse;
@@ -49,9 +28,10 @@ font-family: Outfit;
   border-bottom: 1px solid #ccc;
 }
 
-.itemDetails, .itemQuantity, .itemPrice, .itemTotal {
+.itemQuantity, .itemPrice, .itemTotal {
   flex: 1;
   text-align: center;
+  margin-top: 30px;
 }
 
 .itemEmpty {
@@ -59,7 +39,14 @@ font-family: Outfit;
   visibility: hidden; /* Hide the extra div */
 }
 
+.itemDetails {
+
+  flex: 1;
+
+}
+
 .itemDetails img {
   width: 80px;
-  height: 80px;
+  height: auto;
+  background-size:contain;
 }

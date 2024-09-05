@@ -1,8 +1,12 @@
+
 import Cards from '../../components/cards-folder/Cards'
 import styles from './Collection.module.css'
 import { useEffect } from 'react';
 import {useQuery} from '@tanstack/react-query';
 import axios from 'axios';
+import { toggleStatus } from '../../store/slices/cartSlice';
+import { useSelector, useDispatch } from 'react-redux';
+
 
 function Collection() {
   useEffect(() => {
@@ -24,19 +28,43 @@ function Collection() {
    );
 
 if (data) {
-console.log('card datas:', data);
-console.log(data[0].imagePath)
+console.log(data[0].imagePath);
+console.log(data[0].description);
+console.log(data[0].productPrice);
+console.log(data[0].id);
 }
 
 
+const dispatch = useDispatch();
 
-const description = [ 'Marks & Spencer']
-const price = [50]
+const handleAddToCart = () => {
+  // Dispatch the toggleStatus action
+  dispatch(toggleStatus());
+};
+
+
+
 
   return (
     <div className={styles.collection}>
 
-      { data && <Cards img={data[0].imagePath} description={description} price = {price}/> }
+
+
+{data && data.length > 0 ? data.map((card)=> <Cards key={card.id}
+          img={card.imagePath}
+          description={card.description}
+          price={card.productPrice}
+          handleAddToCart={handleAddToCart}
+
+        /> )
+
+       : (
+        'loading ... '
+      )}
+
+
+
+
 
 
 
