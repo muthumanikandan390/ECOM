@@ -1,5 +1,7 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+
 import Home from "./pages/Home-folder/Home";
 import Login from "./pages/Login-folder/Login";
 import NavBar from "./components/navbar-folder/NavBar";
@@ -9,8 +11,13 @@ import About from "./pages/About-folder/About";
 import Footer from "./components/footer-folder/Footer";
 import Cart from "./pages/Cart-folder/Cart";
 
+
+const queryClient = new QueryClient()
+
+
 function App() {
   return (
+    <QueryClientProvider client={queryClient} >
     <BrowserRouter>
     <NavBar />
     <Routes>
@@ -23,6 +30,7 @@ function App() {
     </Routes>
     <Footer/>
   </BrowserRouter>
+  </QueryClientProvider>
   )
 }
 
