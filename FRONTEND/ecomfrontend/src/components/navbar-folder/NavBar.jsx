@@ -11,7 +11,7 @@ function NavBar() {
 
 
  const count = useSelector((state) => state.cart.count);
- console.log('this is the ini state', count)
+//  console.log('this is the ini state', count)
 
 
 

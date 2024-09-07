@@ -14,7 +14,7 @@ function Collection() {
   }, []);
 
   const cardArray = Array.from(Array(12));
-  console.log(cardArray)
+  // console.log(cardArray)
 
 
 

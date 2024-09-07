@@ -29,7 +29,9 @@ addItems(state , action) {
 
 const newItem = action.payload
 
-state.cartArr.push(newItem)
+// state.cartArr.push(newItem)
+
+state.cartArr.unshift(newItem)
 
 const cartCount = state.cartArr.length
 

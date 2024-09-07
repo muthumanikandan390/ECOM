@@ -7,6 +7,14 @@ function Cart() {
   const status = useSelector((state) => state.cart.status);
   console.log(status)
 
+  const currentCartItems = useSelector((state) => state.cart.cartArr)
+  console.log("length of arr", currentCartItems)
+
+
+
+
+
+
   return (
     <div className={styles.cart}>
       <div className={styles.cartContainer}>
@@ -15,7 +23,7 @@ function Cart() {
   {/* Heading Bar */}
 
 
-{ status === true ?
+{ currentCartItems.length > 0 ?
 <>
 <div className={styles.cartHeader}>
     <div className={styles.headerItem}>Product</div>
@@ -25,21 +33,22 @@ function Cart() {
     <div className={styles.headerItem}>Total</div>
     <div className={styles.headerItem}></div>
   </div>
-<CartItem />
+
+
+{ currentCartItems.map((item)=> <CartItem key={item.id} imagePath={item.imagePath} description={item.description.split(" ").slice(0 , 2) } quantity={2} price={"10.02"} />)}
+
+
+<CartItem imagePath={'p_img1.png'} description={'shirt'} quantity={2} price={"10.02"} />
+
 </>
    :
    <>
-   <p>The cart is empty , pls add items </p>
-   <Link to='/collection'><button>add items &larr;</button></Link>
+   <p className={styles.cartTablePara} >The cart is empty , pls add items </p>
+   <Link to='/collection' ><button className={styles.cartTablebutton} >add items &larr;</button></Link>
 
 </>
 
 }
-
-
-
-
-
 
 
   </div>
@@ -47,7 +56,6 @@ function Cart() {
 
 
       </div>
-
 
   )
 }

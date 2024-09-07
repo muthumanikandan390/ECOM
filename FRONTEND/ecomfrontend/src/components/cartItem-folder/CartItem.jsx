@@ -1,19 +1,23 @@
+/* eslint-disable react/prop-types */
 import styles from './CartItem.module.css'
 
-function CartItem() {
+function CartItem({imagePath , description , quantity , price }) {
+
+  const convertedPrice = parseFloat(price)
+
   return (
 
 <div className={styles.cartItems}>
 
     <div className={styles.cartItem}>
       <div className={styles.itemDetails} >
-      <img src={'p_img1.png'}></img>
+      <img src={imagePath}></img>
       </div>
 
-      <div className={styles.itemQuantity}>shirt</div>
-      <div className={styles.itemQuantity}>2</div>
-      <div className={styles.itemPrice}>$10.00</div>
-      <div className={styles.itemTotal}>$20.00</div>
+      <div className={styles.itemQuantity}>{description}</div>
+      <div className={styles.itemQuantity}>{quantity}</div>
+      <div className={styles.itemPrice}>${convertedPrice}</div>
+      <div className={styles.itemTotal}>${convertedPrice*quantity}</div>
       <div className={styles.itemTotal}><button>delete</button></div>
     </div>
     </div>
