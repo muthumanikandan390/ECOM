@@ -36,7 +36,7 @@
 
 .itemEmpty {
   flex: 1;
-  visibility: hidden; /* Hide the extra div */
+  visibility: hidden;
 }
 
 .itemDetails {

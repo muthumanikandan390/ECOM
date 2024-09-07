@@ -4,7 +4,7 @@ import styles from './Collection.module.css'
 import { useEffect } from 'react';
 import {useQuery} from '@tanstack/react-query';
 import axios from 'axios';
-import { toggleStatus } from '../../store/slices/cartSlice';
+import { toggleStatus , addItems} from '../../store/slices/cartSlice';
 import { useSelector, useDispatch } from 'react-redux';
 
 
@@ -27,45 +27,43 @@ function Collection() {
 
    );
 
-if (data) {
-console.log(data[0].imagePath);
-console.log(data[0].description);
-console.log(data[0].productPrice);
-console.log(data[0].id);
-}
+// if (data) {
+// console.log(data[0].imagePath);
+// console.log(data[0].description);
+// console.log(data[0].productPrice);
+// console.log(data[0].id);
+// console.log(data[0]);
+// }
 
 
 const dispatch = useDispatch();
 
-const handleAddToCart = () => {
-  // Dispatch the toggleStatus action
-  dispatch(toggleStatus());
+
+const handleAddToCart = (card) => {
+
+  toggleStatus
+  dispatch(addItems(card))
 };
 
 
 
 
   return (
-    <div className={styles.collection}>
 
+    <div className={styles.collection}>
 
 
 {data && data.length > 0 ? data.map((card)=> <Cards key={card.id}
           img={card.imagePath}
           description={card.description}
           price={card.productPrice}
-          handleAddToCart={handleAddToCart}
+          handleAddToCart={()=>handleAddToCart(card)}
 
         /> )
 
        : (
         'loading ... '
       )}
-
-
-
-
-
 
 
     </div>

@@ -2,11 +2,23 @@ import {assets} from '../../assets/assets'
 import styles from './navBar.module.css'
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
 
 function NavBar() {
 
  const [active , setActive] = useState(false)
+
+
+ const count = useSelector((state) => state.cart.count);
+ console.log('this is the ini state', count)
+
+
+
+
+
+
+
 
 
 
@@ -61,7 +73,7 @@ function NavBar() {
         <NavLink to='/cart'>
         <div className={styles.badgeContainer}>
         <img className={styles.cartImg} src={assets.cart_icon}></img>
-        <p className={styles.badge}>0</p>
+        <p className={styles.badge}>{count}</p>
         </div>
         </NavLink>
 
