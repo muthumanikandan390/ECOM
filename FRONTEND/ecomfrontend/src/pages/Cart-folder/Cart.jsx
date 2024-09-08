@@ -7,7 +7,7 @@ function Cart() {
   const status = useSelector((state) => state.cart.status);
   console.log(status)
 
-  const currentCartItems = useSelector((state) => state.cart.cartArr)
+  const currentCartItems = useSelector((state) => state.cart.minicartArr)
   console.log("length of arr", currentCartItems)
 
 
@@ -35,10 +35,8 @@ function Cart() {
   </div>
 
 
-{ currentCartItems.map((item)=> <CartItem key={item.id} imagePath={item.imagePath} description={item.description.split(" ").slice(0 , 2) } quantity={2} price={"10.02"} />)}
+{ currentCartItems.map((item)=> <CartItem key={item.id} imagePath={item.imagePath} description={item.description.split(" ")[0] +' '+item.description.split(" ")[1] } quantity={item.quantity} price={item.productPrice} data={item} />)}
 
-
-<CartItem imagePath={'p_img1.png'} description={'shirt'} quantity={2} price={"10.02"} />
 
 </>
    :

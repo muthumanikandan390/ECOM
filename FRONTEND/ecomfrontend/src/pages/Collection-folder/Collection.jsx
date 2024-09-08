@@ -40,8 +40,6 @@ const dispatch = useDispatch();
 
 
 const handleAddToCart = (card) => {
-
-  toggleStatus
   dispatch(addItems(card))
 };
 
@@ -58,7 +56,6 @@ const handleAddToCart = (card) => {
           description={card.description}
           price={card.productPrice}
           handleAddToCart={()=>handleAddToCart(card)}
-
         /> )
 
        : (
