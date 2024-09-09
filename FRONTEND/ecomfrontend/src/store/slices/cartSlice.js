@@ -49,11 +49,18 @@ state.count = cartCount
 
 clearCart(state , action){
 
-  const cartItem = action.payload
+const cartItem = action.payload
 
 state.minicartArr = state.minicartArr.filter(obj => obj.id !== cartItem.id );
 
- console.log(cartItem.id)
+state.cartArr = state.cartArr.filter(obj => obj.id !== cartItem.id );
+
+state.count = state.cartArr.length
+
+
+
+
+console.log(cartItem.id)
 
 },
 
