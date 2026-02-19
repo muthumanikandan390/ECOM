@@ -48,7 +48,7 @@ function NavBar() {
                  </NavLink>
 
 
-                  <NavLink to='about' className={({ isActive }) => isActive ? `${styles.active}` : "" }>
+                  {/* <NavLink to='about' className={({ isActive }) => isActive ? `${styles.active}` : "" }>
 
                   <h1> ABOUT </h1>
 
@@ -59,7 +59,7 @@ function NavBar() {
 
             <h1> CONTACT </h1>
 
-          </NavLink>
+          </NavLink> */}
 
         </ul>
 

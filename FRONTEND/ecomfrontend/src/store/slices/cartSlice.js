@@ -57,9 +57,6 @@ state.cartArr = state.cartArr.filter(obj => obj.id !== cartItem.id );
 
 state.count = state.cartArr.length
 
-
-
-
 console.log(cartItem.id)
 
 },
